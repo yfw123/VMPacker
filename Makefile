@@ -16,13 +16,13 @@ OBJCOPY  = $(CROSS)objcopy
 GO       = go
 
 # 目录
-STUB_DIR   = stub
+STUB_DIR   = stub/linux/arm64
 CMD_DIR    = cmd/vmpacker
 DEMO_DIR   = demo
 BUILD_DIR  = build
 
 # ------ VM 解释器 blob ------
-STUB_SRC   = $(STUB_DIR)/vm_interp_clean.c
+STUB_SRC   = $(STUB_DIR)/vm_interp.c
 STUB_LDS   = $(STUB_DIR)/vm_interp.lds
 STUB_O     = $(BUILD_DIR)/stub/vm_interp.o
 STUB_ELF   = $(BUILD_DIR)/stub/vm_interp.elf
